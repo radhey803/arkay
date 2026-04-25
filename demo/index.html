@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arkay Interior & Furniture - Premium custom wooden furniture in Jaipur. Specializing in bedroom sets, dining tables, and modular kitchens.">
+    <meta name="keywords" content="furniture Jaipur, custom furniture, wooden furniture, modular kitchen, bedroom sets">
+    <title>Arkay Interior & Furniture | Premium Furniture in Jaipur</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Outfit', 'sans-serif']
+                    },
+                    colors: {
+                        walnut: '#5D4037',
+                        amber: '#D4A574',
+                        forest: '#2C5F2D',
+                        cream: '#F5F1E8',
+                        charcoal: '#2B2B2B'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-charcoal bg-cream">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 shadow-sm transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-walnut to-amber rounded-lg flex items-center justify-center">
+                        <span class="text-white font-serif font-bold text-2xl">A</span>
+                    </div>
+                    <div class="hidden md:block">
+                        <span class="font-serif text-2xl font-bold text-walnut">Arkay</span>
+                        <span class="block text-xs text-amber uppercase tracking-wider">Interior & Furniture</span>
+                    </div>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="pages/about.html" class="nav-link">About Us</a>
+                    <a href="pages/products.html" class="nav-link">Products</a>
+                    <a href="pages/gallery.html" class="nav-link">Gallery</a>
+                    <a href="pages/contact.html" class="nav-link">Contact</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="pages/contact.html" class="btn-primary">Request Quote</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-walnut p-2" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="container mx-auto px-4 py-4 space-y-3">
+                <a href="index.html" class="block py-2 text-walnut font-medium">Home</a>
+                <a href="pages/about.html" class="block py-2 text-charcoal">About Us</a>
+                <a href="pages/products.html" class="block py-2 text-charcoal">Products</a>
+                <a href="pages/gallery.html" class="block py-2 text-charcoal">Gallery</a>
+                <a href="pages/contact.html" class="block py-2 text-charcoal">Contact</a>
+                <a href="pages/contact.html" class="btn-primary block text-center mt-4">Request Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: linear-gradient(rgba(45, 37, 33, 0.5), rgba(45, 37, 33, 0.3)), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920');">
+                <div class="container mx-auto px-4 lg:px-8 h-full flex items-center">
+                    <div class="max-w-3xl text-white animate-fade-in-up">
+                        <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                            Crafting Timeless <br><span class="text-amber">Elegance</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
+                            Premium custom furniture handcrafted with precision and passion
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="pages/products.html" class="btn-primary-large">Explore Collection</a>
+                            <a href="pages/contact.html" class="btn-secondary-large">Get Custom Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(45, 37, 33, 0.5), rgba(45, 37, 33, 0.3)), url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1920');">
+                <div class="container mx-auto px-4 lg:px-8 h-full flex items-center">
+                    <div class="max-w-3xl text-white animate-fade-in-up">
+                        <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                            Bespoke Furniture <br><span class="text-amber">For Your Home</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
+                            Custom designs tailored to your space and style
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="pages/products.html" class="btn-primary-large">View Products</a>
+                            <a href="pages/gallery.html" class="btn-secondary-large">See Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(45, 37, 33, 0.5), rgba(45, 37, 33, 0.3)), url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1920');">
+                <div class="container mx-auto px-4 lg:px-8 h-full flex items-center">
+                    <div class="max-w-3xl text-white animate-fade-in-up">
+                        <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                            Transform Your <br><span class="text-amber">Living Spaces</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
+                            From concept to creation - we bring your vision to life
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="pages/about.html" class="btn-primary-large">Our Story</a>
+                            <a href="pages/contact.html" class="btn-secondary-large">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Controls -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
+            <button class="slider-dot active" data-slide="0"></button>
+            <button class="slider-dot" data-slide="1"></button>
+            <button class="slider-dot" data-slide="2"></button>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Why Choose Arkay</h2>
+                <p class="section-subtitle">Excellence in Every Detail</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="feature-card group">
+                    <div class="feature-icon">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-walnut mb-3">Premium Quality</h3>
+                    <p class="text-gray-600 leading-relaxed">Handcrafted with finest materials and exceptional attention to detail</p>
+                </div>
+                
+                <div class="feature-card group">
+                    <div class="feature-icon">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-walnut mb-3">Custom Design</h3>
+                    <p class="text-gray-600 leading-relaxed">Tailored solutions to fit your unique space and style preferences</p>
+                </div>
+                
+                <div class="feature-card group">
+                    <div class="feature-icon">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-walnut mb-3">Timely Delivery</h3>
+                    <p class="text-gray-600 leading-relaxed">On-schedule completion and professional installation services</p>
+                </div>
+                
+                <div class="feature-card group">
+                    <div class="feature-icon">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-walnut mb-3">Warranty</h3>
+                    <p class="text-gray-600 leading-relaxed">Comprehensive warranty and after-sales support for peace of mind</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-20 bg-cream">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Featured Collection</h2>
+                <p class="section-subtitle">Discover Our Finest Creations</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800" alt="Luxury Bedroom Set" class="product-image">
+                        <div class="product-overlay">
+                            <a href="pages/product-detail.html" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Bedroom</span>
+                        <h3 class="product-title">Royal Walnut Bedroom Set</h3>
+                        <p class="product-price">Starting at ₹85,000</p>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800" alt="Sofa Set" class="product-image">
+                        <div class="product-overlay">
+                            <a href="pages/product-detail.html" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Living Room</span>
+                        <h3 class="product-title">Premium L-Shape Sofa</h3>
+                        <p class="product-price">Starting at ₹65,000</p>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800" alt="Dining Set" class="product-image">
+                        <div class="product-overlay">
+                            <a href="pages/product-detail.html" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Dining</span>
+                        <h3 class="product-title">Classic Dining Table Set</h3>
+                        <p class="product-price">Starting at ₹55,000</p>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=800" alt="Modular Kitchen" class="product-image">
+                        <div class="product-overlay">
+                            <a href="pages/product-detail.html" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Kitchen</span>
+                        <h3 class="product-title">Modern Modular Kitchen</h3>
+                        <p class="product-price">Starting at ₹1,50,000</p>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800" alt="Wardrobe" class="product-image">
+                        <div class="product-overlay">
+                            <a href="pages/product-detail.html" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Storage</span>
+                        <h3 class="product-title">Designer Wardrobe System</h3>
+                        <p class="product-price">Starting at ₹45,000</p>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800" alt="Study Table" class="product-image">
+                        <div class="product-overlay">
+                            <a href="pages/product-detail.html" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Office</span>
+                        <h3 class="product-title">Executive Study Desk</h3>
+                        <p class="product-price">Starting at ₹28,000</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="pages/products.html" class="btn-primary-large">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-walnut text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-amber rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-forest rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 lg:px-8 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="font-serif text-5xl md:text-6xl font-bold mb-2 text-amber counter" data-target="15">0</div>
+                    <div class="text-lg md:text-xl text-gray-300">Years Experience</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-serif text-5xl md:text-6xl font-bold mb-2 text-amber counter" data-target="5000">0</div>
+                    <div class="text-lg md:text-xl text-gray-300">Happy Customers</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-serif text-5xl md:text-6xl font-bold mb-2 text-amber counter" data-target="12000">0</div>
+                    <div class="text-lg md:text-xl text-gray-300">Projects Delivered</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-serif text-5xl md:text-6xl font-bold mb-2 text-amber counter" data-target="50">0</div>
+                    <div class="text-lg md:text-xl text-gray-300">Expert Craftsmen</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real Stories, Real Satisfaction</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="testimonial-slider">
+                    <div class="testimonial-slide active">
+                        <div class="bg-cream p-8 md:p-12 rounded-2xl">
+                            <div class="flex items-center mb-6">
+                                <div class="flex text-amber text-2xl">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                </div>
+                            </div>
+                            <p class="text-xl md:text-2xl font-serif text-charcoal mb-6 leading-relaxed">
+                                "The quality of furniture and attention to detail exceeded our expectations. The team was professional and delivered exactly what we envisioned for our home."
+                            </p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-walnut to-amber rounded-full mr-4"></div>
+                                <div>
+                                    <div class="font-bold text-lg">Priya Sharma</div>
+                                    <div class="text-gray-600">Vaishali Nagar, Jaipur</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="bg-cream p-8 md:p-12 rounded-2xl">
+                            <div class="flex items-center mb-6">
+                                <div class="flex text-amber text-2xl">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                </div>
+                            </div>
+                            <p class="text-xl md:text-2xl font-serif text-charcoal mb-6 leading-relaxed">
+                                "Excellent craftsmanship and customer service. They customized everything to our requirements and the installation was seamless. Highly recommended!"
+                            </p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-walnut to-amber rounded-full mr-4"></div>
+                                <div>
+                                    <div class="font-bold text-lg">Rajesh Malhotra</div>
+                                    <div class="text-gray-600">Mansarovar, Jaipur</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="bg-cream p-8 md:p-12 rounded-2xl">
+                            <div class="flex items-center mb-6">
+                                <div class="flex text-amber text-2xl">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                </div>
+                            </div>
+                            <p class="text-xl md:text-2xl font-serif text-charcoal mb-6 leading-relaxed">
+                                "Beautiful modular kitchen design! The storage solutions are perfect and the wood finish is stunning. Worth every penny invested."
+                            </p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-walnut to-amber rounded-full mr-4"></div>
+                                <div>
+                                    <div class="font-bold text-lg">Kavita Agarwal</div>
+                                    <div class="text-gray-600">C-Scheme, Jaipur</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center space-x-3 mt-8">
+                    <button class="testimonial-dot active" data-slide="0"></button>
+                    <button class="testimonial-dot" data-slide="1"></button>
+                    <button class="testimonial-dot" data-slide="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-walnut to-charcoal text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-br from-amber to-transparent rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 lg:px-8 text-center relative z-10">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Space?</h2>
+            <p class="text-xl md:text-2xl mb-10 text-gray-200 max-w-3xl mx-auto">
+                Let's create furniture that perfectly fits your vision. Get a free consultation today.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="pages/contact.html" class="btn-secondary-large">Schedule Consultation</a>
+                <a href="tel:+919876543210" class="btn-outline-white">Call Now: +91 98765 43210</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-walnut to-amber rounded-lg flex items-center justify-center">
+                            <span class="text-white font-serif font-bold text-2xl">A</span>
+                        </div>
+                        <div>
+                            <span class="font-serif text-2xl font-bold">Arkay</span>
+                            <span class="block text-xs text-amber uppercase tracking-wider">Interior & Furniture</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Crafting premium furniture with passion and precision since 2010. Your satisfaction is our masterpiece.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-link"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="#" class="social-link"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                        <a href="#" class="social-link"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                        <a href="#" class="social-link"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-6 text-amber">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="pages/about.html" class="footer-link">About Us</a></li>
+                        <li><a href="pages/products.html" class="footer-link">Products</a></li>
+                        <li><a href="pages/gallery.html" class="footer-link">Gallery</a></li>
+                        <li><a href="pages/contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Products -->
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-6 text-amber">Our Products</h3>
+                    <ul class="space-y-3">
+                        <li><a href="pages/products.html" class="footer-link">Bedroom Furniture</a></li>
+                        <li><a href="pages/products.html" class="footer-link">Living Room Sets</a></li>
+                        <li><a href="pages/products.html" class="footer-link">Dining Tables</a></li>
+                        <li><a href="pages/products.html" class="footer-link">Modular Kitchens</a></li>
+                        <li><a href="pages/products.html" class="footer-link">Office Furniture</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-6 text-amber">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 mt-1 text-amber flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span class="text-gray-400">Building No.138, Vidhyut Nagar C, Chitrakoot Scheme, Jaipur - 302021</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-amber flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <a href="tel:+919876543210" class="text-gray-400 hover:text-amber transition-colors">+91 98765 43210</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-amber flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <a href="mailto:info@arkayfurniture.com" class="text-gray-400 hover:text-amber transition-colors">info@arkayfurniture.com</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-amber flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="text-gray-400">Mon - Sat: 10:00 AM - 8:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Arkay Interior & Furniture. All rights reserved. | <a href="#" class="hover:text-amber transition-colors">Privacy Policy</a> | <a href="#" class="hover:text-amber transition-colors">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+        </svg>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
