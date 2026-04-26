@@ -43,13 +43,16 @@ h4.font-heading {
 }
 
 .site-header.is-scrolled {
-  background: rgba(20, 18, 16, 0.95) !important;
-  backdrop-filter: blur(18px);
+  background: rgba(20, 18, 16, 0.97) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.32);
 }
 
 .site-header {
-  background: rgba(20, 18, 16, 0.95) !important;
+  background: rgba(20, 18, 16, 0.97) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   border-color: #2a221a !important;
 }
 
@@ -71,7 +74,7 @@ h4.font-heading {
 }
 
 .site-header .mobile-panel {
-  background: #171311 !important;
+  background: #1a1410 !important;
 }
 
 .site-header .mobile-panel a {
@@ -81,6 +84,7 @@ h4.font-heading {
 .site-header .mobile-panel a:hover,
 .site-header .mobile-panel a:focus {
   color: #d2b179 !important;
+  background: rgba(210, 177, 121, 0.12) !important;
 }
 
 .site-footer {
@@ -173,10 +177,30 @@ h4.font-heading {
 .mobile-panel {
   transform: translateX(102%);
   transition: transform 0.32s ease;
+  background: #1a1410 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  isolation: isolate;
 }
 
 .mobile-panel.is-open {
   transform: translateX(0);
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 59;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.32s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .carousel-slide {

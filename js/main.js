@@ -71,10 +71,16 @@
     const closeButton = $('#mobileNavClose');
     if (!toggle || !panel) return;
 
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(overlay);
+
     const openNav = () => {
       panel.classList.add('is-open');
       panel.setAttribute('aria-hidden', 'false');
       toggle.setAttribute('aria-expanded', 'true');
+      overlay.classList.add('is-visible');
       lockScroll(true);
     };
 
@@ -82,6 +88,7 @@
       panel.classList.remove('is-open');
       panel.setAttribute('aria-hidden', 'true');
       toggle.setAttribute('aria-expanded', 'false');
+      overlay.classList.remove('is-visible');
       lockScroll(false);
     };
 
@@ -90,6 +97,7 @@
     });
 
     closeButton?.addEventListener('click', closeNav);
+    overlay.addEventListener('click', closeNav);
     panel.addEventListener('click', (event) => {
       if (event.target.closest('a')) closeNav();
     });
