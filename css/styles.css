@@ -70,16 +70,12 @@ h4.font-heading {
   color: #d2b179 !important;
 }
 
-.site-header .mobile-panel {
-  background: #171311 !important;
-}
-
-.site-header .mobile-panel a {
+.mobile-panel a {
   color: #f4ede4 !important;
 }
 
-.site-header .mobile-panel a:hover,
-.site-header .mobile-panel a:focus {
+.mobile-panel a:hover,
+.mobile-panel a:focus {
   color: #d2b179 !important;
 }
 
@@ -171,12 +167,39 @@ h4.font-heading {
 }
 
 .mobile-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  height: 100dvh;
+  width: min(86vw, 340px);
+  background: #1a1208 !important;
   transform: translateX(102%);
   transition: transform 0.32s ease;
+  z-index: 500;
+  isolation: isolate;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: -8px 0 48px rgba(0, 0, 0, 0.7);
 }
 
 .mobile-panel.is-open {
   transform: translateX(0);
+}
+
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 490;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.32s ease;
+}
+
+.nav-backdrop.is-visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .carousel-slide {

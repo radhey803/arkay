@@ -71,8 +71,13 @@
     const closeButton = $('#mobileNavClose');
     if (!toggle || !panel) return;
 
+    const backdrop = document.createElement('div');
+    backdrop.className = 'nav-backdrop';
+    document.body.appendChild(backdrop);
+
     const openNav = () => {
       panel.classList.add('is-open');
+      backdrop.classList.add('is-visible');
       panel.setAttribute('aria-hidden', 'false');
       toggle.setAttribute('aria-expanded', 'true');
       lockScroll(true);
@@ -80,6 +85,7 @@
 
     const closeNav = () => {
       panel.classList.remove('is-open');
+      backdrop.classList.remove('is-visible');
       panel.setAttribute('aria-hidden', 'true');
       toggle.setAttribute('aria-expanded', 'false');
       lockScroll(false);
@@ -90,6 +96,7 @@
     });
 
     closeButton?.addEventListener('click', closeNav);
+    backdrop.addEventListener('click', closeNav);
     panel.addEventListener('click', (event) => {
       if (event.target.closest('a')) closeNav();
     });
