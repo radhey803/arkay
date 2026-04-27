@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
 /* ── Design Tokens ── */
 :root {
@@ -42,7 +42,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   color: var(--text-primary);
   background: var(--bg-deep);
@@ -68,7 +68,7 @@ body::-webkit-scrollbar-thumb:hover { background: rgba(212,175,55,0.45); }
 /* ── Typography ── */
 .font-heading,
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cinzel', serif !important;
+  font-family: 'Playfair Display', serif !important;
   font-weight: 600;
   letter-spacing: 0.02em;
   color: var(--text-primary) !important;
@@ -114,7 +114,7 @@ main > section {
 }
 
 input, textarea, select {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   color: var(--text-primary) !important;
   background: rgba(255,255,255,0.04) !important;
   border: 1px solid var(--glass-border) !important;
@@ -510,7 +510,7 @@ a:hover { color: var(--gold-light); }
 
 .premium-stats .count-value {
   color: var(--gold) !important;
-  font-family: 'Cinzel', serif !important;
+  font-family: 'Playfair Display', serif !important;
 }
 
 /* ── Testimonials ── */
