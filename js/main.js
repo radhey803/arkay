@@ -6,6 +6,7 @@
 
   const state = {
     animatedCounters: new WeakSet(),
+    theme: localStorage.getItem('arkay-theme') || 'light',
   };
 
   function throttle(fn, delay = 120) {
@@ -367,7 +368,45 @@
     });
   }
 
+  /* ── Theme Toggle ── */
+  function initThemeToggle() {
+    // Apply saved theme immediately
+    applyTheme(state.theme, false);
+
+    // Wire up all toggle buttons
+    $$('.theme-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const next = state.theme === 'dark' ? 'light' : 'dark';
+        applyTheme(next, true);
+      });
+    });
+  }
+
+  function applyTheme(theme, animate) {
+    state.theme = theme;
+    const root = document.documentElement;
+
+    if (animate) {
+      root.classList.add('theme-transitioning');
+      setTimeout(() => root.classList.remove('theme-transitioning'), 600);
+    }
+
+    if (theme === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+    } else {
+      root.removeAttribute('data-theme');
+    }
+
+    localStorage.setItem('arkay-theme', theme);
+
+    // Update aria labels on toggle buttons
+    $$('.theme-toggle').forEach(btn => {
+      btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    });
+  }
+
   function init() {
+    initThemeToggle();
     initLoadingScreen();
     initStickyHeader();
     initMobileNav();
@@ -383,6 +422,14 @@
     initForms();
     initLazyImages();
   }
+
+  // Apply theme before DOM ready to avoid flash
+  (function() {
+    const saved = localStorage.getItem('arkay-theme') || 'light';
+    if (saved === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
 
   document.addEventListener('DOMContentLoaded', init);
 })();

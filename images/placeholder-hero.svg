@@ -9,6 +9,6 @@
   <rect width="1920" height="1080" fill="url(#heroBg)"/>
   <circle cx="1500" cy="260" r="250" fill="#FFD700" opacity="0.12"/>
   <circle cx="420" cy="860" r="340" fill="#F5F5DC" opacity="0.08"/>
-  <text x="50%" y="46%" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="84" font-weight="800" fill="#FFFFFF">Nilkamal Homes</text>
+  <text x="50%" y="46%" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="84" font-weight="800" fill="#FFFFFF">Arkay Interior</text>
   <text x="50%" y="55%" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" fill="#F5F5DC">Premium Furniture &amp; Homeware</text>
 </svg>
