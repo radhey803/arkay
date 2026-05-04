@@ -32,7 +32,7 @@
   --hero-bg: #2C2419;
   --footer-bg-start: #1e1b16;
   --footer-bg-end: #141210;
-  --mobile-bg: #1e1b16;
+  --mobile-bg: #ffffff;
   --modal-overlay: rgba(0,0,0,0.4);
   --modal-bg: #ffffff;
   --input-bg: rgba(0,0,0,0.02);
@@ -254,9 +254,7 @@ a:hover { color: var(--gold-light); }
   background-color: var(--mobile-bg) !important;
   background-image: none !important;
   backdrop-filter: none !important;
-  border-left: 1px solid rgba(212,175,55,0.12);
   z-index: 9999 !important;
-  box-shadow: -10px 0 40px rgba(0,0,0,0.8);
 }
 
 .mobile-panel.is-open {
@@ -275,16 +273,13 @@ a:hover { color: var(--gold-light); }
   right: 100%;
   bottom: 0;
   width: 100vw;
-  background: rgba(0,0,0,0.7);
   z-index: -1;
   pointer-events: none;
 }
 
 .mobile-panel a {
   color: var(--text-primary) !important;
-  border-radius: var(--radius-sm);
-  background: rgba(255,255,255,0.05) !important;
-  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-md);
   transition: all 0.3s var(--ease-out);
   position: relative;
   overflow: hidden;
@@ -295,18 +290,10 @@ a:hover { color: var(--gold-light); }
   position: absolute;
   left: 0; top: 0;
   width: 3px; height: 100%;
-  background: var(--gold);
+  background: linear-gradient(180deg, #D4AF37, #B8961F);
   transform: scaleY(0);
   transition: transform 0.3s var(--ease-out);
   border-radius: 0 4px 4px 0;
-}
-
-.mobile-panel a:hover,
-.mobile-panel a:focus {
-  background: rgba(212,175,55,0.10) !important;
-  border-color: rgba(212,175,55,0.20);
-  color: var(--gold) !important;
-  padding-left: 24px;
 }
 
 .mobile-panel a:hover::before,
@@ -991,9 +978,97 @@ html.theme-transitioning *::after {
 .site-footer .footer-badge { color: #9A9080; border-color: rgba(255,255,255,0.08); background: rgba(255,255,255,0.06); }
 .site-footer .footer-chip { color: #9A9080; background: rgba(255,255,255,0.06); }
 
-/* Mobile drawer always dark */
-.mobile-panel a { color: #F5F0E8 !important; }
-.mobile-panel a:hover { color: #D4AF37 !important; }
+/* ═══════════════════════════════════════════
+   MOBILE DRAWER — LIGHT THEME (Premium)
+   ═══════════════════════════════════════════ */
+:root .mobile-panel {
+  background: #ffffff !important;
+  border-left: 1px solid rgba(184,150,31,0.12);
+  box-shadow: -6px 0 48px rgba(44,36,25,0.10);
+}
+
+:root .mobile-panel.is-open::after {
+  background: rgba(44,36,25,0.25);
+}
+
+:root .mobile-panel span,
+:root .mobile-panel p {
+  color: #2C2419 !important;
+}
+
+:root .mobile-panel a {
+  background: linear-gradient(135deg, #FAF7F2, #F5F1EB) !important;
+  border: 1px solid rgba(184,150,31,0.08) !important;
+  color: #2C2419 !important;
+  box-shadow: 0 1px 4px rgba(44,36,25,0.04);
+  backdrop-filter: none;
+}
+
+:root .mobile-panel a:hover,
+:root .mobile-panel a:focus {
+  background: linear-gradient(135deg, #FDF8EC, #F7EFD9) !important;
+  border-color: rgba(184,150,31,0.30) !important;
+  color: #9A7B14 !important;
+  padding-left: 24px;
+  box-shadow: 0 4px 20px rgba(184,150,31,0.08), 0 0 0 1px rgba(184,150,31,0.10);
+}
+
+:root .mobile-panel #mobileNavClose {
+  background: #F5F1EB !important;
+  color: #2C2419 !important;
+  border: 1px solid rgba(44,36,25,0.08) !important;
+}
+
+:root .mobile-panel #mobileNavClose:hover {
+  background: rgba(212,175,55,0.10) !important;
+  border-color: rgba(184,150,31,0.25) !important;
+  color: #B8961F !important;
+}
+
+/* ═══════════════════════════════════════════
+   MOBILE DRAWER — DARK THEME
+   ═══════════════════════════════════════════ */
+[data-theme="dark"] .mobile-panel {
+  background: #0a0a0a !important;
+  border-left: 1px solid rgba(212,175,55,0.12);
+  box-shadow: -10px 0 40px rgba(0,0,0,0.8);
+}
+
+[data-theme="dark"] .mobile-panel.is-open::after {
+  background: rgba(0,0,0,0.7);
+}
+
+[data-theme="dark"] .mobile-panel span,
+[data-theme="dark"] .mobile-panel p {
+  color: #F5F0E8 !important;
+}
+
+[data-theme="dark"] .mobile-panel a {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  color: #F5F0E8 !important;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .mobile-panel a:hover,
+[data-theme="dark"] .mobile-panel a:focus {
+  background: rgba(212,175,55,0.10) !important;
+  border-color: rgba(212,175,55,0.20) !important;
+  color: #D4AF37 !important;
+  padding-left: 24px;
+}
+
+[data-theme="dark"] .mobile-panel #mobileNavClose {
+  background: rgba(255,255,255,0.06) !important;
+  color: #F5F0E8 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+[data-theme="dark"] .mobile-panel #mobileNavClose:hover {
+  background: rgba(212,175,55,0.10) !important;
+  border-color: rgba(212,175,55,0.20) !important;
+  color: #D4AF37 !important;
+}
 
 /* Cookie banner always dark */
 .cookie-banner p, .cookie-banner span,
