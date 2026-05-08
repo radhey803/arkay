@@ -39,12 +39,19 @@
 
     const nextSlide = () => goTo(index + 1);
     const prevSlide = () => goTo(index - 1);
+
+    /* First slide (info) stays 5s, image slides rotate every 4s */
+    const getDelay = () => index === 0 ? 5000 : 4000;
+
     const startAutoplay = () => {
       stopAutoplay();
-      timer = window.setInterval(nextSlide, 5500);
+      timer = window.setTimeout(() => {
+        nextSlide();
+        startAutoplay();
+      }, getDelay());
     };
     const stopAutoplay = () => {
-      if (timer) window.clearInterval(timer);
+      if (timer) window.clearTimeout(timer);
     };
     const restartAutoplay = () => {
       startAutoplay();
